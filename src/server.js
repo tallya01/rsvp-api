@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const sequelize = require('./db/database');
 
 // Import models to register associations before sync
@@ -11,6 +12,7 @@ const guestCodesRouter = require('./routes/guestCodes');
 const confirmationsRouter = require('./routes/confirmations');
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 // ----- Routes -----
