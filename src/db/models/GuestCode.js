@@ -33,6 +33,10 @@ const GuestCode = sequelize.define('GuestCode', {
     allowNull: true,
     defaultValue: null,
   },
+  expiration_date: {
+    type: DataTypes.DATE,
+    allowNull: true,
+  },
 }, {
   tableName: 'guest_codes',
   timestamps: true,
